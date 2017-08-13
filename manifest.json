@@ -1,0 +1,46 @@
+{
+	"name": "epark应用",
+	"version": "1.0.0.1",
+	"manifest_version": 2,
+	"description": "linghaisen，493101885@qq.com",
+	"permissions": [
+		{
+			"fileSystem": [
+				"write",
+				"directory"
+			]
+		},
+		{
+			"mediaGalleries": [
+				"read",
+				"allAutoDetected",
+				"delete",
+				"copyTo"
+			]
+		},
+		"system.cpu",
+		"system.memory",
+		"system.storage",
+		"app.window.alwaysOnTop",
+		"storage",
+		"unlimitedStorage",
+		"notifications",
+		"http://*/*",
+		"https://*/*"
+	],
+	"app": {
+		"background": {
+			"page": "html/background.html"
+		}
+	},
+	"sandbox": {
+		"pages": [
+			"html/sandboxed.html"
+		]
+	},
+	"icons": {
+		"16": "image/demon-16.png",
+		"48": "image/demon-48.png",
+		"128": "image/demon-128.png"
+	}
+}

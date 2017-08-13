@@ -1,0 +1,79 @@
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>epark应用窗口</title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="../css/glyphicons.css" />
+		<link rel="stylesheet" type="text/css" href="../common/bootstrap/css/bootstrap.css" />
+		<script src="../js/jquery-3.2.1.js"></script>
+		<script src="../common/bootstrap/js/bootstrap.js"></script>
+		<!--<script src="../js/progress.js"></script>-->
+		<script src="../js/memory.js"></script>
+		<script src="../js/fileOperate.js"></script>
+		<style type="text/css">
+
+		</style>
+	</head>
+
+	<body style="position: relative;">
+		<iframe src="login/login.html" frameborder="0" height="100%" width="100%"></iframe>
+
+		<div style="display: none;">
+			<nav class="navbar navbar-default" style="margin-bottom:0px;">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="#">Haisen</a>
+					</div>
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="#option" data-toggle="tab">选项</a>
+						</li>
+						<li class="active">
+							<a href="#smallTools" data-toggle="tab">工具</a>
+						</li>
+						<li>
+							<a href="#sql" data-toggle="tab">发送SQL</a>
+						</li>
+						<li class="">
+							<a href="#config" data-toggle="tab" class="glyphicon glyphicon-cog" style="font-size:20px; color:#777;"></a>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="#login" data-toggle="tab">登录</a>
+						</li>
+						<li>
+							<a href="#register" data-toggle="tab">注册</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<div>
+				<ul class="tab-content" style="height: 100%;margin: 8px 6px;">
+					<li id="option" class="tab-pane fade">aaaaaaaaaa</li>
+					<li id="sql" class="tab-pane fade">bbbbbbbbbb</li>
+					<li id="smallTools" class="tab-pane active fade in">
+						<iframe src="smallTools.html" frameborder="0" height="100%" width="100%"></iframe>
+					</li>
+					<li id="config" class="tab-pane fade">
+						<iframe src="config.html" frameborder="0" height="100%" width="100%"></iframe>
+					</li>
+					<li id="login" class="tab-pane fade">
+						<iframe src="login.html" frameborder="0" height="100%" width="100%"></iframe>
+					</li>
+					<li id="register" class="tab-pane fade">
+						<iframe src="register.html" frameborder="0" height="100%" width="100%"></iframe>
+					</li>
+				</ul>
+			</div>
+			<!-- 02. content-->
+			<div style="display: none;">
+				<input id="openfile" type="button" style="width: 80px;" value="打开文件">
+				<input id="opendirectory" type="button" style="width: 80px;" value="打开目录">
+				<input type="file" id="myFile" />
+			</div>
+		</div>
+	</body>
+
+</html>
