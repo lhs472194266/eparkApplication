@@ -13,17 +13,36 @@ helper.url = {
 }
 
 helper.safe = {
+	factor: 5,
 	encrypt: function(str) {
-		var week = XDate().getDay();	// 周日 = 0
-		int factor = 3;
-		var original = $.base64.btoa(str);
-		var result = original.replace("a", "h");
-		return result;
+		for(var x = 0; x < helper.safe.factor; x++) {
+			str = helper.safe.encrypt_fn(str);
+		}
+		return str;
+	},
+	encrypt_fn: function(str) {
+		var length = str.length;
+		var arr = str.split("");
+		for(var i = 0; i < length - 1; i++) {
+			var ele = arr.shift();
+			arr.splice(i + 1, 0, ele);
+		}
+		return $.base64.btoa(arr.join(""));
 	},
 	decrypt: function(str) {
-		int factor = 3;
-		var secure = $.base64.atob(str);
-		var result = secure.replace("h", "a");
-		return result;
+		for(var x = 0; x < helper.safe.factor; x++) {
+			str = helper.safe.decrypt_fn(str);
+		}
+		return str;
+	},
+	decrypt_fn: function(str) {
+		str = $.base64.atob(str);
+		var length = str.length;
+		var arr = str.split("");
+		for(var i = 1; i < length; i++) {
+			var ele = arr.splice(length - i, 1);
+			arr.unshift(ele);
+		}
+		return arr.join("");
 	}
 }
