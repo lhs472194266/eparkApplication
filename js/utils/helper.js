@@ -47,5 +47,38 @@ helper.safe = {
 	}
 }
 
-
-
+helper.verify = {
+	/**
+	 * str==null 或 str.length == 0  
+	 * @param {Object} str
+	 */
+	isEmpty: function(str) {
+		if(str == null || str.length == 0) {
+			return true;
+		}
+		return false;
+	},
+	/**
+	 * 判断某字符串是否为空 或 长度为0 或 由空白符(whitespace) 构成  
+	 * @param {Object} str
+	 */
+	isBlank: function(str) {
+		if($.trim(str) == "") {
+			return true;
+		}
+		return false;
+	},
+	/**
+	 * helper.verify.isEmpty(str) || helper.verify.isBlank(str)
+	 * @param {Object} str
+	 */
+	isEmptyOrBlank: function(str) {
+		if(helper.verify.isEmpty(str)) {
+			return true;
+		}
+		if(helper.verify.isBlank(str)) {
+			return true;
+		}
+		return false;
+	}
+}

@@ -5,7 +5,7 @@ $(function() {
 			"test": "test"
 		}, function() {
 			chrome.storage.sync.get("test", function(result) {
-				//console.log(result);
+				
 			});
 
 		});
@@ -37,22 +37,5 @@ $(function() {
 			});
 		}
 	});
-
-	/*$.post("http://www.teyiting.com/checklogin.do", {
-		usrName: "admin",
-		usrPwd: "2014bitcom0404!",
-		captcha: 0
-	}, function(data) {
-		console.log(data);
-	});
-	
-	$.post("http://htc.taizhou.gov.cn/checklogin.do", {
-		usrName: "admin",
-		usrPwd: "2014bitcom0404!",
-		captcha: 0
-	}, function(data) {
-		console.log(data);
-	});*/
-
 
 });

@@ -24,7 +24,7 @@ $(function() {
 					$.post(baseURL + "UserController/register", {
 							email: email,
 							userName: userName,
-							password: password
+							password: helper.safe.encrypt(password)
 						},
 						function(data) {
 							if(data.result.code == 0) {
@@ -35,7 +35,7 @@ $(function() {
 									window.location.href = window.location.origin + "/html/login/login.html?userName=" + userName + "&password=" + password
 								}, 1000);
 							} else {
-								$("#myModalLabel").text("注册失败，" + data.result.meassage + "...");
+								$("#myModalLabel").text("注册失败，" + data.result.message + "...");
 								$('#myModal').modal('show');
 								setTimeout(function(num) {
 									$('#myModal').modal('hide');
@@ -66,6 +66,11 @@ $(function() {
 			if($.trim(password).length == 0 || /.*?(\s+).*?/g.test($.trim(password))) {
 				result.code = 1;
 				result.meassge = "密码设置错误.";
+				return result;
+			}
+			if($.trim(password).length > 12) {
+				result.code = 1;
+				result.meassge = "密码长度不能超过12位.";
 				return result;
 			}
 			if(passwordConfirm != password) {
