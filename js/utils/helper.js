@@ -13,7 +13,7 @@ helper.url = {
 }
 
 helper.safe = {
-	factor: 5,
+	factor: 2,
 	encrypt: function(str) {
 		for(var x = 0; x < helper.safe.factor; x++) {
 			str = helper.safe.encrypt_fn(str);
@@ -27,7 +27,7 @@ helper.safe = {
 			var ele = arr.shift();
 			arr.splice(i + 1, 0, ele);
 		}
-		return $.base64.btoa(arr.join(""));
+		return window.btoa(arr.join(""));
 	},
 	decrypt: function(str) {
 		for(var x = 0; x < helper.safe.factor; x++) {
@@ -36,7 +36,7 @@ helper.safe = {
 		return str;
 	},
 	decrypt_fn: function(str) {
-		str = $.base64.atob(str);
+		str = window.atob(str);
 		var length = str.length;
 		var arr = str.split("");
 		for(var i = 1; i < length; i++) {
