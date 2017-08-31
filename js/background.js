@@ -5,7 +5,7 @@ $(function() {
 			"test": "test"
 		}, function() {
 			chrome.storage.sync.get("test", function(result) {
-				
+
 			});
 
 		});

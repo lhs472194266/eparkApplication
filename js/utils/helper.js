@@ -15,6 +15,7 @@ helper.url = {
 helper.safe = {
 	factor: 2,
 	encrypt: function(str) {
+		str = window.encodeURI(str);
 		for(var x = 0; x < helper.safe.factor; x++) {
 			str = helper.safe.encrypt_fn(str);
 		}
@@ -33,7 +34,7 @@ helper.safe = {
 		for(var x = 0; x < helper.safe.factor; x++) {
 			str = helper.safe.decrypt_fn(str);
 		}
-		return str;
+		return window.decodeURI(str);
 	},
 	decrypt_fn: function(str) {
 		str = window.atob(str);
