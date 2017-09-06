@@ -1,22 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 
-	<head>
-		<meta charset="UTF-8">
-		<title>sql发送</title>
-		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
-		<link rel="stylesheet" type="text/css" href="../css/glyphicons.css" />
-		<link rel="stylesheet" type="text/css" href="../common/bootstrap/css/bootstrap.css" />
-	</head>
+<head>
+<meta charset="UTF-8">
+<title>sql发送</title>
+<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+<link rel="stylesheet" type="text/css" href="../css/glyphicons.css" />
+<link rel="stylesheet" type="text/css" href="../common/bootstrap/css/bootstrap.css" />
+<style type="text/css">
+.panel-title span {
+	width: 100%;
+	display: inline-block;
+}
+</style>
+</head>
 
-	<body>
-		<input id="openfile" type="button" style="width: 80px;" value="上传文件">
-		
-		<script src="../js/jquery-3.2.1.js"></script>
-		<script src="../common/bootstrap/js/bootstrap.js"></script>
-		<script type="text/javascript" src="../js/utils/xdate.js"></script>
-		<script type="text/javascript" src="../js/utils/helper.js"></script>
-		<script type="text/javascript" src="../js/fileOperate.js"></script>
-		<script type="text/javascript" src="../js/config.js"></script>
-	</body>
+<body>
+	<div style="height: 60px;">
+		<h1>
+			<span>系统参数</span>
+			<button type="button" class="btn btn-default pull-right" style="margin-right: 20px;">
+				<span class="glyphicon glyphicon-refresh"></span>
+				<span>数据同步</span>
+			</button>
+		</h1>
+	</div>
+	<div style="padding: 0px 12px;">
+		<div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+			<div class="panel panel-default">
+				<div class="panel-heading" role="tab" id="headingOne">
+					<h4 class="panel-title">
+						<span role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true"
+							aria-controls="collapseOne">项目列表</span>
+					</h4>
+				</div>
+				<div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+					<table class="table table-bordered table-condensed">
+						<thead>
+							<tr>
+								<td>项目名</td>
+								<td>项目地址</td>
+								<td>项目状态</td>
+							</tr>
+						</thead>
+						<tr>
+							<td>22222222</td>
+							<td>33333333</td>
+							<td>33333333</td>
+						</tr>
+						<tr class="danger">
+							<td>22222222</td>
+							<td>33333333</td>
+							<td>33333333</td>
+						</tr>
+						<tr>
+							<td>22222222</td>
+							<td>33333333</td>
+							<td>33333333</td>
+						</tr>
+					</table>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading" role="tab" id="headingTwo">
+					<h4 class="panel-title">
+						<span role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false"
+							aria-controls="collapseTwo">其它</span>
+					</h4>
+				</div>
+				<div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+					<div class="panel-body">Anim pariat VHS.</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- <a id="openfile" class="btn btn-default btn-lg" href="javascript:void(0);" role="button"></a> -->
+	<!-- <a href="http://www.qqe2.com/" target="_blank" >json工具</a> -->
+
+	<script src="../js/jquery-3.2.1.js"></script>
+	<script src="../common/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="../js/utils/xdate.js"></script>
+	<script type="text/javascript" src="../js/utils/helper.js"></script>
+	<script type="text/javascript" src="../js/fileOperate.js"></script>
+	<script type="text/javascript" src="../js/config.js"></script>
+</body>
 </html>

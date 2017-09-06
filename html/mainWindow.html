@@ -1,64 +1,58 @@
 <html>
 
-	<head>
-		<meta charset="UTF-8">
-		<title>epark应用窗口</title>
-		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
-		<link rel="stylesheet" type="text/css" href="../css/glyphicons.css" />
-		<link rel="stylesheet" type="text/css" href="../common/bootstrap/css/bootstrap.css" />
-		<style type="text/css">
+<head>
+<meta charset="UTF-8">
+<title>epark应用窗口</title>
+<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+<link rel="stylesheet" type="text/css" href="../css/glyphicons.css" />
+<link rel="stylesheet" type="text/css" href="../common/bootstrap/css/bootstrap.css" />
+<style type="text/css">
+</style>
+</head>
 
-		</style>
-	</head>
-
-	<body style="position: relative;">
-		<!--<iframe id="mainlogIn" src="login/login.html" frameborder="0" height="100%" width="100%"></iframe>-->
-		<div id="mainTool">
-			<nav class="navbar navbar-default" style="margin-bottom:0px;">
-				<div class="container-fluid">
-					<div class="navbar-header">
-						<a class="navbar-brand" href="#">Haisen</a>
-					</div>
-					<ul id="menu" class="nav navbar-nav">
-						<li>
-							<a href="#option" data-toggle="tab">配置</a>
-						</li>
-						<li class="active">
-							<a href="#config" data-toggle="tab" class="glyphicon glyphicon-cog" style="font-size:20px; color:#777;"></a>
-						</li>
-					</ul>
-					<ul class="nav navbar-nav navbar-right">
-						<li>
-							<a id="userName" class="glyphicon glyphicon-user">&nbsp;</a>
-						</li>
-					</ul>
+<body style="position: relative;">
+	<!-- <iframe id="mainlogIn" src="login/login.html" frameborder="0" height="100%" width="100%"></iframe> -->
+	<div id="mainTool">
+		<nav class="navbar navbar-default" style="margin-bottom: 0px;">
+			<div class="container-fluid">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#">Haisen</a>
 				</div>
-			</nav>
-			<div>
-				<ul class="tab-content" style="height: 100%;margin: 8px 6px;">
-					<li id="option" class="tab-pane fade in">
-					</li>
-					<li id="config" class="tab-pane active fade in">
-						<iframe src="config.html" frameborder="0" height="100%" width="100%"></iframe>
+				<ul id="menu" class="nav navbar-nav">
+					<li><a href="#option" data-toggle="tab">配置</a></li>
+					<li class="active">
+						<a href="#config" data-toggle="tab" class="glyphicon glyphicon-cog" style="font-size: 20px; color: #777;"></a>
 					</li>
 				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li><a id="userName" class="glyphicon glyphicon-user">&nbsp;</a></li>
+				</ul>
 			</div>
-			<!-- 02. content-->
-			<div style="display: none;">
-				<input id="openfile" type="button" style="width: 80px;" value="打开文件">
-				<input id="opendirectory" type="button" style="width: 80px;" value="打开目录">
-				<input type="file" id="myFile" />
-			</div>
+		</nav>
+		<div>
+			<ul class="tab-content" style="height: 100%; margin: 8px 6px;">
+				<li id="option" class="tab-pane fade in"></li>
+				<li id="config" class="tab-pane active fade in">
+					<iframe src="config.html" frameborder="0" height="100%" width="100%"></iframe>
+				</li>
+			</ul>
 		</div>
+		<!-- 02. content-->
+		<div style="display: none;">
+			<input id="openfile" type="button" style="width: 80px;" value="打开文件"/>
+			<input id="opendirectory" type="button" style="width: 80px;" value="打开目录"/> 
+			<input type="file" id="myFile" />
+		</div>
+	</div>
 
-		<script src="../js/jquery-3.2.1.js"></script>
-		<script src="../common/bootstrap/js/bootstrap.js"></script>
-		<script type="text/javascript" src="../js/utils/xdate.js"></script>
-		<script type="text/javascript" src="../js/utils/jquery.base64.js"></script>
-		<script type="text/javascript" src="../js/utils/helper.js"></script>
-		<script type="text/javascript" src="../js/mainWindow.js"></script>
-		<script type="text/javascript" src="../js/memory.js"></script>
-		<script type="text/javascript" src="../js/fileOperate.js"></script>
-	</body>
+	<script src="../js/jquery-3.2.1.js"></script>
+	<script src="../common/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="../js/utils/xdate.js"></script>
+	<script type="text/javascript" src="../js/utils/jquery.base64.js"></script>
+	<script type="text/javascript" src="../js/utils/helper.js"></script>
+	<script type="text/javascript" src="../js/mainWindow.js"></script>
+	<script type="text/javascript" src="../js/memory.js"></script>
+	<script type="text/javascript" src="../js/fileOperate.js"></script>
+</body>
 
 </html>

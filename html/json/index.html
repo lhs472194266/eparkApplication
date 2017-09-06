@@ -1,0 +1,101 @@
+
+<!DOCTYPE HTML><html><head>    <title>JSON在线编辑器帮助文档</title>    <meta charset="utf-8">    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />    <meta name="keywords" content="在线,JSON,JSON 校验,格式化,xml转json 工具,在线工具,json视图,可视化,程序,服务器,域名注册,正则表达式,测试,在线json格式化工具,json 格式化,json格式化工具,json字符串格式化,json 在线查看器,json在线,json 在线验证,json tools online,在线文字对比工具" />    <meta name="description" content="在线,JSON,JSON 校验,格式化,xml转json 工具,在线工具,json视图,可视化,程序,服务器,域名注册,正则表达式,测试,在线json格式化工具,json 格式化,json格式化工具,json字符串格式化,json 在线查看器,json在线,json 在线验证,json tools online,在线文字对比工具">    <script src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>    <link href="http://cdn.bootcss.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">    <script src="http://cdn.bootcss.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>    <link rel="stylesheet" href="/css/core.css">    <script src="/Js/core.js"></script>    <link href="doc.css" rel="stylesheet" type="text/css"></head>
+<body>    <div class="aw-container-wrap">        <div class="container">            <div class="row">                <div class="aw-content-wrap clearfix">                    <div class=" aw-main-content" style="min-height: 700px; max-height: 2000px">                        
+<div id="nav_menu">    <nav class="navbar navbar-default">        <div class="container-fluid">            <ul class="nav navbar-nav" style="width: 100%;">                <!--待开放功能-->                
+                <li>                    <a href="http://qqe2.com">首页</a>                </li>
+                <li class="dropdown">                <li><a href="/cron/index">Cron生成器</a>                </li>                <li><a href="/jsonlint/index">JSON校验</a>                </li>                <li><a href="http://edit.qqe2.com" title="JS压缩" target="_blank">JS压缩</a></li>                <!--暂开放功能 Start-->                <li class="dropdown">                    <a href="#" class="dropdown-toggle" id="jsontools" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">JSON相关<span class="caret"></span></a>                    <ul class="dropdown-menu">                        <li><a href="/">JSON在线编辑器</a>                        </li>                        <li><a href="/jsonview/index" target="_blank">JSON视图</a>                        </li>                        <li><a href="/JSONTOOL/jsonescape/index">JSON压缩转义</a>                        </li>                        <li><a href="/JSONTOOL/json2entity/index">JSON生成实体类</a>                        </li>                        <li><a href="/JSONTOOL/json2xml/index">XML-JSON互转</a></li>                        <li><a href="/JSONTOOL/json2get/index" id="json2get">JSON和GET请求字符串互转</a></li>                        <li><a href="/JSONTOOL/excel2json/index" id="excel2json">Excel转Json</a></li>                    </ul>                </li>                <li class="dropdown">                    <a href="#" id="encTools" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">编码/加密<span class="caret"></span></a>                    <ul class="dropdown-menu">                        <li><a href="/encrypt/base64">Base64编码、解码</a></li>                        <li><a href="/encrypt/md5">MD5加密</a></li>                        <li><a href="/encrypt/sha">SHA加密</a></li>                        <li><a href="/encrypt/escape">Escape编码</a></li>                        <li><a href="/encrypt/urlencode" id="urlEncode">URL编码</a></li>                        <li><a href="/encrypt/eval_package">Javascript Eval加密解密</a></li>                        <li><a href="/encrypt/morse">摩斯密码加密解密</a></li>                    </ul>                </li>                <li class="dropdown">                    <a href="#" class="dropdown-toggle" id="A1" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">VIP视频<span class="caret"></span></a>                    <ul class="dropdown-menu">                        <li><a href="/Video/default.html">通道一</a>                        </li>                        <li><a href="/Video/index.html" target="_blank">通道二</a>                        </li>                    </ul>                </li>                <li><a href="http://old.qqe2.com">返回旧版</a>                </li>                <!--End-->
+                
+                <li class="dropdown">                    <a href="/msg/msg.aspx" style="color: red;" target="_blank">留言</a>                </li>            </ul>        </div>    </nav></div>
+
+                        <div style="clear: both"></div>                        <div class="panel panel-default">                            <div class="panel-heading">                                <div class="media">                                    <div class="media-body">                                        <h1 class="media-heading">JSON在线编辑器帮助文档</h1>                                    </div>                                </div>                            </div>                            <div class="panel-body">                                <div id="container">                                    <h2 id="introduction"><b>简介</b></h2>                                    <p>                                        JSON编辑器在线是一个基于网络的工具来查看、编辑和格式JSON。
+    这说明你的数据并排在一个明确的、可编辑的TreeView和
+    代码编辑器。
+ 
+                                    </p>                                    <p>                                        支持的浏览器：Chrome，Firefox，Safari，Opera，Internet Explorer 8 +。
+ 
+                                    </p>                                    <p>                                        网址: <a href="http://qqe2.com" target="_blank">http://qqe2.com</a>.
+ 
+                                    </p>                                    <p>                                        目录:
+ 
+                                    </p>                                    <ul>                                        <li><a href="#panels">面板</a></li>                                        <li><a href="#code_editor">代码编辑器</a></li>                                        <li><a href="#tree_editor">树编辑器</a></li>                                        <!--<li><a href="#query_parameters">Query parameters</a></li>-->                                        <li><a href="#shortcut_keys">快捷键</a></li>                                    </ul>
+                                    <h2 id="panels">面板</h2>                                    <p>                                        该应用程序包含两个面板：左边的一个代码编辑器，右边的一个树编辑器。
+ 
+                                    </p>                                    <p>                                        两个面板之间有一个拆分器，允许更改
+    两个面板宽度根据个人的需要。
+    要将内容从一个面板复制到另一个面板，两个复制按钮
+    面板之间可以使用。
+ 
+                                    </p>                                    <img src="img/splitter.png">
+                                    <h2 id="code_editor">代码编辑器</h2>                                    <p>                                        代码编辑器在代码编辑器中显示的JSON数据。
+    编辑能够格式化，压缩，检查JSON。
+ 
+                                    </p>                                    <img src="img/code_editor.png">                                    <p>                                        代码编辑器的菜单包含以下按钮：
+ 
+                                    </p>                                    <ul>                                        <li>                                            <b>格式化</b>.
+      JSON数据格式，采用格式化使数据让其可读性更高。
+    </li>                                        <li>                                            <b>压缩</b>.
+      压缩的JSON数据，删除所有不必要的字节。例如：空格和回车
+    </li>                                    </ul>
+                                    <h2 id="tree_editor">树编辑器</h2>                                    <p>                                        树编辑器是一个JSON数据的树形编辑器。编辑器使其对JSON更简单的创建，复制，删除区块，和编辑区块内的内容。
+ 
+                                    </p>                                    <img src="img/tree_editor.png">                                    <p>                                        树编辑器的菜单包含以下功能：
+ 
+                                    </p>                                    <ul>                                        <li>                                            <b>展开全部</b>.在编辑器中展开所有节点。
+    </li>                                        <li>                                            <b>折叠全部</b>. 在编辑器中折叠所有节点。
+    </li>                                        <li>                                            <b>撤消</b>. 撤销操作
+    </li>                                        <li>                                            <b>重做</b>. 重做最后一个动作。
+    </li>                                        <li>                                            <b>搜索</b>. 在树编辑器中搜索文本。
+      搜索结果将被高亮显示，并可以通过
+      反复按 Enter 或 Shift+Enter.
+      右侧搜索框两个按钮到下一个或
+      以前的搜索结果。
+    </li>                                    </ul>
+                                    <p>                                        在编辑器中编辑输入字段的字段值。
+    该字段可以上下拖动使用
+   
+            <img src="img/button_dragarea.png" class="icon">                                        在区块的左面. 当一个字段是数组或对象的节点，也可以拖动水平将它移到数组或对象中。
+ 
+                                    </p>                                    <img src="img/actions_menu.png" align="right" style="padding-left: 20px;">                                    <p>                                        从拖动区域的右边是一个按钮
+   
+            <img src="img/button_actions_menu.png" class="icon">                                        打开 <b>操作菜单</b>.
+    这取决于类型的功能领域，以下是
+    可以在操作菜单：
+ 
+                                    </p>                                    <ul>                                        <li>                                            <b>类型</b>. 改变字段的类型。选择:
+     
+                <ul>                    <li>                        <b>auto</b>字段类型是自动确定的
+          该值可以是字符串、数字、布尔值或空值。
+        </li>                    <li>                        <b>object</b>键/值对的无序集合。
+        </li>                    <li>                        <b>array</b>有序集合的值。
+        </li>                    <li>                        <b>string</b>                        字段类型不是从值确定的，
+          但总是返回字符串。
+        </li>                </ul>                                        </li>                                        <li>                                            <b>Sort</b>. 数组或对象的节点的那种。
+      对于一个数组，对节点的值将排序。万一
+      一个对象，节点将被按键。
+      数组和对象可以按上升或下降进行排序。
+    </li>                                        <li>                                            <b>Insert</b>. 在当前字段之前插入一个新字段。
+      可用的类型是自动（默认），对象，数组和字符串。
+    </li>                                        <li>                                            <b>Append</b>. 在当前字段后插入一个新字段。
+      可用的类型是相同的插入动作。
+    </li>                                        <li>                                            <b>Duplicate</b>重复的领域包括所有的子节点。
+    </li>                                        <li>                                            <b>Remove</b>. 删除的字段包括所有的子节点。
+    </li>                                    </ul>
+                                    <h2 id="shortcut_keys">快捷键</h2>                                    <p>                                        树编辑器支持所有可用操作的快捷键。
+    编辑可以使用的只是一个键盘。
+    下面的快捷键是可用的：
+ 
+                                    </p>
+                                    <h3 id="global_keys">公共的</h3>
+                                    <table>                                        <tr>                                            <th>Key</th>                                            <th>描述</th>                                        </tr>                                        <tr>                                            <td>Ctrl+&gt;</td>                                            <td>将代码从左面板复制到右面板，并将焦点移动到右面板上。</td>                                        </tr>                                        <tr>                                            <td>Ctrl+&lt;</td>                                            <td>将代码从右面板复制到左面板，并将焦点移到左面板上。</td>                                        </tr>                                    </table>
+                                    <h3 id="tree_editor_keys">树编辑器</h3>
+                                    <table>                                        <tr>                                            <th>Key</th>                                            <th>描述</th>                                        </tr>                                        <tr>                                            <td>Alt+Arrows</td>                                            <td>将插入符号的上/下/左/右区域之间</td>                                        </tr>                                        <tr>                                            <td>Shift+Arrow Up/Down</td>                                            <td>选择多个领域</td>                                        </tr>                                        <tr>                                            <td>Shift+Alt+Arrows</td>                                            <td>移动区上/下/左/右</td>                                        </tr>                                        <tr>                                            <td>Ctrl+D</td>                                            <td>复制区</td>                                        </tr>                                        <tr>                                            <td>Ctrl+Del</td>                                            <td>删除节点</td>                                        </tr>                                        <tr>                                            <td>Ctrl+Ins</td>                                            <td>插入类型自动插入一个新字段</td>                                        </tr>                                        <tr>                                            <td>Ctrl+Shift+Ins</td>                                            <td>添加类型自动添加一个新字段</td>                                        </tr>                                        <tr>                                            <td>Ctrl+E</td>                                            <td>折叠/展开节点</td>                                        </tr>                                        <tr>                                            <td>Alt+End</td>                                            <td>插入到最后一个节点</td>                                        </tr>                                        <tr>                                            <td>Ctrl+F</td>                                            <td>查找</td>                                        </tr>                                        <tr>                                            <td>F3, Ctrl+G<br>                                            </td>                                            <td>查找下一个</td>                                        </tr>                                        <tr>                                            <td>Shift+F3, Ctrl+Shift+G</td>                                            <td>查找上一个</td>                                        </tr>                                        <tr>                                            <td>Alt+Home</td>                                            <td>将插入符号的第一节点</td>                                        </tr>                                        <tr>                                            <td>Ctrl+M</td>                                            <td>显示操作菜单</td>                                        </tr>                                        <tr>                                            <td>Ctrl+Z</td>                                            <td>撤消操作</td>                                        </tr>                                        <tr>                                            <td>Ctrl+Shift+Z</td>                                            <td>重做</td>                                        </tr>                                    </table>
+                                    <h3 id="code_editor_keys">代码编辑器</h3>
+                                    <p>                                        这里描述的是编辑器的快捷键：
+ 
+                                    </p>                                    <p>                                        此外，还有快捷键来格式化/压缩代码：
+ 
+                                    </p>                                    <table>                                        <tr>                                            <th>Key</th>                                            <th>描述</th>                                        </tr>                                        <tr>                                            <td>Ctrl+\</td>                                            <td>格式JSON数据</td>                                        </tr>                                        <tr>                                            <td>Ctrl+Shift+\</td>                                            <td>压缩的JSON数据，删除所有空格</td>                                        </tr>                                    </table>
+                                </div>                            </div>                            <div class="panel-footer"></div>                        </div>
+                    </div>                </div>            </div>        </div>    </div>    
+<script>var _hmt = _hmt || [];(function () {var hm = document.createElement("script");hm.src = "https://hm.baidu.com/hm.js?adebc3d0ae83e7a888cd5f472c16164a";var s = document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm, s);})();</script>
+</body></html>
