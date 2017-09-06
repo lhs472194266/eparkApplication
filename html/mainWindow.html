@@ -19,10 +19,8 @@
 					<a class="navbar-brand" href="#">Haisen</a>
 				</div>
 				<ul id="menu" class="nav navbar-nav">
-					<li><a href="#option" data-toggle="tab">配置</a></li>
-					<li class="active">
-						<a href="#config" data-toggle="tab" class="glyphicon glyphicon-cog" style="font-size: 20px; color: #777;"></a>
-					</li>
+					<li class="active"><a href="#option" data-toggle="tab">配置</a></li>
+					<li><a href="#config" data-toggle="tab" class="glyphicon glyphicon-cog" style="font-size: 20px; color: #777;"></a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
 					<li><a id="userName" class="glyphicon glyphicon-user">&nbsp;</a></li>
@@ -31,17 +29,15 @@
 		</nav>
 		<div>
 			<ul class="tab-content" style="height: 100%; margin: 8px 6px;">
-				<li id="option" class="tab-pane fade in"></li>
-				<li id="config" class="tab-pane active fade in">
-					<iframe src="config.html" frameborder="0" height="100%" width="100%"></iframe>
-				</li>
+				<li id="option" class="tab-pane active fade in">
+					<iframe src="switch.html" frameborder="0" height="100%" width="100%"></iframe></li>
+				<li id="config" class="tab-pane fade in"><iframe src="config.html" frameborder="0" height="100%" width="100%"></iframe></li>
 			</ul>
 		</div>
 		<!-- 02. content-->
 		<div style="display: none;">
-			<input id="openfile" type="button" style="width: 80px;" value="打开文件"/>
-			<input id="opendirectory" type="button" style="width: 80px;" value="打开目录"/> 
-			<input type="file" id="myFile" />
+			<input id="openfile" type="button" style="width: 80px;" value="打开文件" /> <input id="opendirectory" type="button"
+				style="width: 80px;" value="打开目录" /> <input type="file" id="myFile" />
 		</div>
 	</div>
 
