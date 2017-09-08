@@ -2,7 +2,10 @@ $(function() {
 	var configSwitch = function() {
 		var obj = new Object();
 		obj.baseUrl = "http://127.0.0.1:13370/";
+		// ############################################ 【绑定client 发送请求】  ############################################
 		obj.init = function() {
+			// 1. 查询当前配置文件的状态（待完成）
+			// 2. 绑定事件
 			$("#config_switch").find("button").click(function() {
 				var proejectName = $(this).val();
 				obj.switchConfigFile(proejectName).switchDbFile(proejectName);
@@ -26,7 +29,7 @@ $(function() {
 				obj.switchLog4jFile($(this).val());
 			});
 		};
-
+		// ############################################ 【START 页面切换】  ############################################
 		obj.switchButton = function(elementId) {
 			$(elementId).find("button").each(function() {
 				$(this).css("background", "");
@@ -43,6 +46,8 @@ $(function() {
 			}
 			return obj;
 		};
+	    // ############################################ 【START 页面切换】  ############################################
+		// ############################################ 【START 切换文件】  ############################################
 		obj.switchConfigFile = function(projectName) {
 			$.post(obj.baseUrl + "switchConfigFile?projectName=" + projectName, function(data) {
 				obj.showSwitchStatus(data, "#config_status");
@@ -79,6 +84,7 @@ $(function() {
 			});
 			return obj;
 		};
+		// ############################################ 【END 切换文件】  ############################################
 		return obj;
 	}
 	configSwitch().init();
