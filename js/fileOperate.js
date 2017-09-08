@@ -51,7 +51,7 @@ $(function() {
 		});
 	} );
 	
-	document.getElementById('myFile').onchange = function(){
+	/*document.getElementById('myFile').onchange = function(){
 	    var file = this.files[0];
 	    console.log(file);
 	    var reader = new FileReader();
@@ -59,5 +59,5 @@ $(function() {
 	    reader.onload = function(){
 	        console.log(this.result);
 	    }
-	}
+	}*/
 });

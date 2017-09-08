@@ -7,6 +7,7 @@
 <link rel="stylesheet" type="text/css" href="../css/reset.css" />
 <link rel="stylesheet" type="text/css" href="../css/glyphicons.css" />
 <link rel="stylesheet" type="text/css" href="../common/bootstrap/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="../common/bootstrap-switch-master/dist/css/bootstrap3/bootstrap-switch.min.css" />
 <style type="text/css">
 .panel-title span {
 	width: 100%;
@@ -24,29 +25,49 @@
 			</button> -->
 		</h1>
 	</div>
-	<h4>切换项目</h4>
-	<div id="config_switch" class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+	<h4 style="display: inline-block;">切换项目配置（config+db+log4j）</h4>
+	<span id="config_status" style="color: green;">success</span>
+	<div id="config_switch" class="btn-toolbar" role="toolbar">
 		<div class="btn-group" role="group" aria-label="First group">
-			<button type="button" class="btn btn-default">61本地</button>
-			<button type="button" class="btn btn-default">联通机房</button>
-			<button type="button" class="btn btn-default">其它</button>
-			<button type="button" class="btn btn-default">4</button>
-		</div>
-		<div class="btn-group" role="group" aria-label="Second group">
-			<button type="button" class="btn btn-default">5</button>
-			<button type="button" class="btn btn-default">6</button>
-			<button type="button" class="btn btn-default">7</button>
-		</div>
-		<div class="btn-group" role="group" aria-label="Third group">
-			<button type="button" class="btn btn-default">8</button>
+			<button id="Ali_config" type="button" class="btn btn-default" value="Ali">阿里特易停</button>
+			<button id="ChangShu_config" type="button" class="btn btn-default" value="ChangShu">常熟</button>
+			<button id="GuangYuan_config" type="button" class="btn btn-default" value="GuangYuan">广元</button>
+			<button id="QingDaoUnicom_config" type="button" class="btn btn-default" value="QingDaoUnicom">联通机房</button>
+			<button id="RiZhao_config" type="button" class="btn btn-default" value="RiZhao">日照</button>
+			<button id="TaiZhou_config" type="button" class="btn btn-default" value="TaiZhou">泰州</button>
+			<button id="Test_config" type="button" class="btn btn-default" value="Test">61本地</button>
+			<button id="ZhengZhou_config" type="button" class="btn btn-default" value="ZhengZhou">郑州</button>
 		</div>
 	</div>
-
+	<h4 style="display: inline-block;">单独切换数据配置(db.properties)</h4>
+	<span id="db_status" style="color: green;">success</span>
+	<div id="db_switch" class="btn-toolbar" role="toolbar">
+		<div class="btn-group" role="group" aria-label="First group">
+			<button id="Ali_db" type="button" class="btn btn-default" value="Ali">外网特易停</button>
+			<button id="ChangShu_db" type="button" class="btn btn-default" value="ChangShu">常熟</button>
+			<button id="GuangYuan_db" type="button" class="btn btn-default" value="GuangYuan">广元</button>
+			<button id="QingDaoUnicom_db" type="button" class="btn btn-default" value="QingDaoUnicom">联通机房</button>
+			<button id="RiZhao_db" type="button" class="btn btn-default" value="RiZhao">日照</button>
+			<button id="TaiZhou_db" type="button" class="btn btn-default" value="TaiZhou">泰州</button>
+			<button id="Test_db" type="button" class="btn btn-default" value="Test">61本地</button>
+			<button id="ZhengZhou_db" type="button" class="btn btn-default" value="ZhengZhou">郑州</button>
+		</div>
+	</div>
+	<h4 style="display: inline-block;">是否注释log4j</h4>
+	<span id="log4j_status" style="color: green;">success</span>
+	<div id="log4j" class="btn-toolbar" role="toolbar">
+		<div class="btn-group" role="group" aria-label="First group">
+			<button id="log4j_hide" type="button" class="btn btn-default" value="false">false不打印</button>
+			<button id="log4j_show" type="button" class="btn btn-default" value="true">true打印</button>
+		</div>
+	</div>
+	
 	<!-- <a id="openfile" class="btn btn-default btn-lg" href="javascript:void(0);" role="button"></a> -->
 	<!-- <a href="http://www.qqe2.com/" target="_blank" >json工具</a> -->
 
-	<script src="../js/jquery-3.2.1.js"></script>
+	<script src="../js/jquery-2.0.3.js"></script>
 	<script src="../common/bootstrap/js/bootstrap.js"></script>
+	<script src="../common/bootstrap-switch-master/dist/js/bootstrap-switch.min.js"></script>
 	<script type="text/javascript" src="../js/utils/xdate.js"></script>
 	<script type="text/javascript" src="../js/utils/helper.js"></script>
 	<script type="text/javascript" src="../js/fileOperate.js"></script>
