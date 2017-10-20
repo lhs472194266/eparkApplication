@@ -1,11 +1,10 @@
 <html>
-
 <head>
 <meta charset="UTF-8">
 <title>epark应用窗口</title>
-<link rel="stylesheet" type="text/css" href="../css/reset.css" />
-<link rel="stylesheet" type="text/css" href="../css/glyphicons.css" />
-<link rel="stylesheet" type="text/css" href="../common/bootstrap/css/bootstrap.css" />
+	<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../css/glyphicons.css" />
+	<link rel="stylesheet" type="text/css" href="../common/bootstrap/css/bootstrap.css" />
 <style type="text/css">
 </style>
 </head>
@@ -16,10 +15,27 @@
 		<nav class="navbar navbar-default" style="margin-bottom: 0px;">
 			<div class="container-fluid">
 				<div class="navbar-header">
-					<a class="navbar-brand" href="#">Haisen</a>
+					<a class="navbar-brand">Haisen</a>
 				</div>
 				<ul id="menu" class="nav navbar-nav">
-					<li class="active"><a href="#option" data-toggle="tab">配置</a></li>
+					<li href="#dropdown" class="dropdown" style="width: 130px;">
+					    <a class="dropdown-toggle" data-toggle="dropdown">
+					    	当前：<span id="menu_project" style="color: red;">泰州</span>
+					    	<span class="caret"></span>
+					   	</a>
+					    <ul class="dropdown-menu">
+					    	<li><a name="teyiting">特易停</a></li>
+				    		<li><a name="taizhou">泰州</a></li>
+					    	<li><a name="rizhao">日照</a></li>
+					    	<li><a name="changshu">常熟</a></li>
+					    	<li><a name="zhengzhou">郑州</a></li>
+					    	<li><a name="liantong">联通机房</a></li>
+					    	<li><a name="local">61测试</a></li>
+					    </ul>
+					</li> 
+					<li><a href="#busSearch" data-toggle="tab">业务查询</a></li>
+					<li><a href="#option" data-toggle="tab">配置</a></li>
+					<li><a href="#tool"   data-toggle="tab">小工具</a></li>
 					<li><a href="#config" data-toggle="tab" class="glyphicon glyphicon-cog" style="font-size: 20px; color: #777;"></a></li>
 				</ul>
 				<ul class="nav navbar-nav navbar-right">
@@ -28,9 +44,15 @@
 			</div>
 		</nav>
 		<div>
-			<ul class="tab-content" style="height: 100%; margin: 8px 6px;">
-				<li id="option" class="tab-pane active fade in">
+			<ul id="content" class="tab-content" style="height: 100%; margin: 8px 6px;">
+				<li id="busSearch" class="tab-pane fade in">
+					<iframe src="busSearch.html" frameborder="0" height="100%" width="100%"></iframe>
+				</li>
+				<li id="option" class="tab-pane fade in">
 					<iframe src="switch.html" frameborder="0" height="100%" width="100%"></iframe>
+				</li>
+				<li id="tool" class="tab-pane fade in">
+					<iframe src="tool.html" frameborder="0" height="100%" width="100%"></iframe>
 				</li>
 				<li id="config" class="tab-pane fade in">
 					<iframe src="config.html" frameborder="0" height="100%" width="100%"></iframe>

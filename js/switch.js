@@ -1,7 +1,7 @@
 $(function() {
 	var configSwitch = function() {
 		var obj = new Object();
-		obj.baseUrl = "http://127.0.0.1:13370/";
+		obj.baseUrl = "http://127.0.0.1:23370/";
 		// ############################################ 【绑定client 发送请求】  ############################################
 		obj.init = function() {
 			// 1. 查询当前配置文件的状态（待完成）
