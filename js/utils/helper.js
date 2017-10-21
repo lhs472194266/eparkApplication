@@ -104,13 +104,13 @@ helper.account = {
 		local 	  : "http://localhost:8080/epark/"
 	},
 	projectName : {
-		teyiting  : "teyiting",
-		taizhou   : "taizhou",
-		rizhao    : "rizhao",
-		changshu  : "changshu",
-		zhengzhou : "zhengzhou",
-		liantong  : "test",
-		local     : "local"
+		teyiting  : "特易停",
+		taizhou   : "泰州",
+		rizhao    : "日照",
+		changshu  : "常熟",
+		zhengzhou : "郑州",
+		liantong  : "联通机房",
+		local     : "本地"
 	}
 };
 

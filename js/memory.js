@@ -5,9 +5,22 @@ $(function() {
 	var initfn = function() {
 		var obj = new Object();
 		obj.bindClick = function() {
+			// 菜单<li>列表绑定事件
 			$("#menu li").click(function() {
 				chrome.storage.sync.set({
 					"currentPage" : $(this).find("a").attr("href")
+				});
+			});
+			
+			// 项目<li>列表绑定事件
+			$("#menu ul").find("li").click(function() {
+				var aDom = $(this).find("a");
+				chrome.storage.sync.set({
+					"projectName" : aDom.attr("name")
+				});
+				$("#menu_project").text(aDom.text());
+				chrome.storage.sync.get(null, function(result) {
+					helper.storage.set("projectUrl",helper.account.absolutePath[result.projectName] + "MHp5TU1Pak1vRHhBTm9DajAzeVNPTUFBPVM9dw==/ZEpHMjF2cFk=");
 				});
 			});
 			return obj;
@@ -27,11 +40,18 @@ $(function() {
 			});
 			return obj;
 		};
+		/**
+		 * 记忆赋值,启动时自动执行.
+		 */
 		obj.initData = function() {
-			chrome.storage.sync.get("currentPage", function(result) {
+			chrome.storage.sync.get(null, function(result) {
 				if (result.currentPage != undefined) {
 					obj.cancelOtherPage();
 					obj.selectPage(result);
+				}
+				if (result.projectName != undefined) {
+					$("#menu_project").text(helper.account.projectName[result.projectName]);
+					helper.storage.set("projectUrl",helper.account.absolutePath[result.projectName] + "MHp5TU1Pak1vRHhBTm9DajAzeVNPTUFBPVM9dw==/ZEpHMjF2cFk=");
 				}
 			});
 			return obj;

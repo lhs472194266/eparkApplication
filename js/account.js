@@ -5,7 +5,7 @@ var account = account || {
 		rizhao    : {usrName : "admin",   usrPwd : ["rzhtc20l7"]},
 		changshu  : {usrName : "admin",	  usrPwd : ["2016cs20l6"]},
 		zhengzhou : {usrName : "admin",   usrPwd : ["hnybc"]},
-		test 	  : {usrName : "admin",   usrPwd : ["123"]},
+		liantong  : {usrName : "admin",   usrPwd : ["123"]},
 		local 	  : {usrName : "admin",   usrPwd : ["2014bitcom0404!","123"]}
 	},
 	absolutePath : {
@@ -16,12 +16,12 @@ var account = account || {
 		rizhao    : "http://jtss.rzbus.cn:980/",
 		changshu  : "http://www.cszhtc.com/",
 		zhengzhou : "http://101.201.57.38/",
-		test 	  : "http://www.topeasypark.com/",
+		liantong  : "http://www.topeasypark.com/",
 		local 	  : "http://localhost:8080/epark/"
 	},
 	projectName : {
-		projectNameArr  :["noProject","teyiting","taizhou","rizhao","changshu","zhengzhou","test","local"],
-		projectNameZhArr:["（空）","特易停","泰州","日照","常熟","郑州","测试","本地"],
+		projectNameArr  :["teyiting","taizhou","rizhao","changshu","zhengzhou","liantong","local"],
+		projectNameZhArr:["特易停","泰州","日照","常熟","郑州","联通机房","本地"],
 		
 		noProject : "noProject",
 		teyiting  : "teyiting",
@@ -29,7 +29,7 @@ var account = account || {
 		rizhao    : "rizhao",
 		changshu  : "changshu",
 		zhengzhou : "zhengzhou",
-		test      : "test",
+		liantong      : "test",
 		local     : "local"
 	}
 };
