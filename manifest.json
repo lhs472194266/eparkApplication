@@ -18,6 +18,7 @@
 				"copyTo"
 			]
 		},
+		"contextMenus",
 		"system.cpu",
 		"system.memory",
 		"system.storage",

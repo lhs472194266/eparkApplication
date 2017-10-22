@@ -11,7 +11,7 @@ $(function() {
 					"currentPage" : $(this).find("a").attr("href")
 				});
 			});
-			
+
 			// 项目<li>列表绑定事件
 			$("#menu ul").find("li").click(function() {
 				var aDom = $(this).find("a");
@@ -20,7 +20,7 @@ $(function() {
 				});
 				$("#menu_project").text(aDom.text());
 				chrome.storage.sync.get(null, function(result) {
-					helper.storage.set("projectUrl",helper.account.absolutePath[result.projectName] + "MHp5TU1Pak1vRHhBTm9DajAzeVNPTUFBPVM9dw==/ZEpHMjF2cFk=");
+					helper.storage.set("projectUrl", helper.account.absolutePath[result.projectName] + "MHp5TU1Pak1vRHhBTm9DajAzeVNPTUFBPVM9dw==/ZEpHMjF2cFk=");
 				});
 			});
 			return obj;
@@ -36,7 +36,7 @@ $(function() {
 		obj.cancelOtherPage = function() {
 			$("#menu > li:gt(0)").each(function(index, domEle) {
 				$(domEle).removeClass("active");
-				$("#" +$(domEle).find("a").attr("href").substring(1)).removeClass("active");
+				$("#" + $(domEle).find("a").attr("href").substring(1)).removeClass("active");
 			});
 			return obj;
 		};
@@ -45,13 +45,14 @@ $(function() {
 		 */
 		obj.initData = function() {
 			chrome.storage.sync.get(null, function(result) {
+				console.log(result);
 				if (result.currentPage != undefined) {
 					obj.cancelOtherPage();
 					obj.selectPage(result);
 				}
 				if (result.projectName != undefined) {
 					$("#menu_project").text(helper.account.projectName[result.projectName]);
-					helper.storage.set("projectUrl",helper.account.absolutePath[result.projectName] + "MHp5TU1Pak1vRHhBTm9DajAzeVNPTUFBPVM9dw==/ZEpHMjF2cFk=");
+					helper.storage.set("projectUrl", helper.account.absolutePath[result.projectName] + "MHp5TU1Pak1vRHhBTm9DajAzeVNPTUFBPVM9dw==/ZEpHMjF2cFk=");
 				}
 			});
 			return obj;

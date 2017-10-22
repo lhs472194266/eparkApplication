@@ -1,40 +1,99 @@
 <!DOCTYPE html>
 <html>
 
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-		<link rel="stylesheet" type="text/css" href="../css/reset.css" />
-		<link rel="stylesheet" type="text/css" href="../css/glyphicons.css" />
-		<link rel="stylesheet" type="text/css" href="../common/bootstrap/css/bootstrap.css" />
-	</head>
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../css/reset.css" />
+	<link rel="stylesheet" type="text/css" href="../css/glyphicons.css" />
+	<link rel="stylesheet" type="text/css" href="../common/bootstrap/css/bootstrap.css" />
+</head>
 
-	<body>
-		<ul class="nav nav-tabs" role="tablist">
-			<li role="presentation" class="active">
-				<a href="#leaguer" data-toggle="tab">会员相关</a>
-			</li>
-			<li role="presentation">
-				<a href="#order" data-toggle="tab">订单相关</a>
-			</li>
-		</ul>
-		<div class="tab-content">
-			<div role="tabpanel" class="tab-pane active" id="leaguer" style="padding: 8px 6px;">
-				<span>会员信息：</span>
-				<div id="leaguer_info" style="width: 100%;height: 100px;border: 1px solid red;">
-					
+<body style="-webkit-user-select: text">
+	<ul class="nav nav-tabs" role="tablist">
+		<li role="presentation" class="active"><a href="#leaguer" data-toggle="tab">会员相关</a></li>
+		<li role="presentation"><a href="#order" data-toggle="tab">订单相关</a></li>
+	</ul>
+	<div class="tab-content">
+		<!-- 01.提示条 -->
+		<div class="modal fade bs-example-modal-sm" id="myModal" tabindex="-1">
+			<div class="modal-dialog modal-sm">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="myModalLabel"></h4>
+					</div>
 				</div>
 			</div>
-			<div role="tabpanel" class="tab-pane" id="order">.22222</div>
 		</div>
+		
+		<!--data-clipboard-text属性的值将会被复制-->
+	    <!-- <div id="btn" data-clipboard-text="我是被复制的内容啊"></div> -->
+	
+		<!-- 02.会员相关 -->
+		<div role="tabpanel" class="tab-pane active" id="leaguer" style="padding: 8px 6px;">
+			<!-- 查询 -->
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-3 col-md-4 col-sm-4">
+						<!-- 查询类型 -->
+						<input type="checkbox" checked data-handle-width="'auto'" id="leaguer_search_type_switch"/>
+						<!-- 车牌类型 -->
+						<select class="selectpicker" id="leaguer_search_plateType" data-width="auto" >
+						  	<option value="7201" style="background: blue;color: #fff;">蓝牌(7201)</option>
+						  	<option value="7202" style="background: yellow;color: #000;">黄牌(7202)</option>
+						  	<option value="7203" style="background: #000;color: #fff;">黑牌(7203)</option>
+						  	<option value="7204">白绿(7204)</option>
+						  	<option value="7205">黄绿(7205)</option>
+						  	<option value="7206">纯绿(7206)</option>
+						  	<option value="7207">白牌(7207)</option>
+						</select>
+					</div>
+					<div class="col-lg-4 col-md-4 col-sm-4">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Search for..." id="leaguer_search_value" value="13863602945"> 
+								<span class="input-group-btn">
+								<button class="btn btn-default" type="button" id="leaguer_search_btn" >查询</button>
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<!-- 01.会员基本信息 -->
+			<div id="leaguer_info"  style="width: auto; height: auto;"></div>
+			<!-- 02.会员号牌信息 -->
+			<div id="leaguer_plate" style="width: 35%; height: auto;"></div>
+			<!-- 03.会员停车卡信息 -->
+			<div id="leaguer_card"  style="width: 100%; height: auto;"></div>
+		</div>
+		
+		<!-- 03.订单相关 -->
+		<div role="tabpanel" class="tab-pane" id="order">
+			<!-- 01.订单信息 -->
+			<!-- 02.订单支付信息 -->
+			<!-- 03.订单是否修改车牌 -->
+		</div>
+	</div>
 
-		<script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
-		<script type="text/javascript" src="../common/bootstrap/js/bootstrap.js"></script>
-		<script type="text/javascript" src="../common/bootstrap-switch-master/dist/js/bootstrap-switch.min.js"></script>
-		<script type="text/javascript" src="../js/utils/xdate.js"></script>
-		<script type="text/javascript" src="../js/utils/helper.js"></script>
-		<script type="text/javascript" src="../js/fileOperate.js"></script>
-		<script type="text/javascript" src="../js/busSearch.js"></script>
-	</body>
+	<script type="text/javascript" src="../js/jquery-2.0.3.js"></script>
+	<script type="text/javascript" src="../common/bootstrap/js/bootstrap.js"></script>
+	<!-- start:bootstrap-select -->
+	<link rel="stylesheet" href="../common/bootstrap-select-1.12.4/dist/css/bootstrap-select.min.css">
+	<script src="../common/bootstrap-select-1.12.4/dist/js/bootstrap-select.min.js"></script>
+	<script src="../common/bootstrap-select-1.12.4/dist/js/i18n/defaults-zh_CN.min.js"></script>
+	<!-- end:bootstrap-select -->
+	<!-- start:bootstrap-switch -->
+	<link href="../common/bootstrap-switch-master/dist/css/bootstrap3/bootstrap-switch.min.css" rel="stylesheet" />
+	<script type="text/javascript" src="../common/bootstrap-switch-master/dist/js/bootstrap-switch.min.js"></script>
+	<!-- end:bootstrap-switch -->
+    
+    <!-- 复制插件 -->
+	<script type="text/javascript" src="../common/clipboard.js-master/dist/clipboard.min.js"></script>
+	
+	<script type="text/javascript" src="../js/utils/xdate.js"></script>
+	<script type="text/javascript" src="../js/utils/helper.js"></script>
+	<script type="text/javascript" src="../js/fileOperate.js"></script>
+	<script type="text/javascript" src="../js/busSearch.js"></script>
+</body>
 
 </html>
