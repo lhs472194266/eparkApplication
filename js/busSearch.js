@@ -121,18 +121,18 @@ $(function() {
 		}
 		leaguer.info = result.rows;
 		var keyArr   = ["leaguer_id","phone_no","open_id","leaguer_regtime","curr_sum","reward_sum","pay_ratio"];
-		leaguer.displayDataToTable("#leaguer_info" ,"会员信息（info_leaguer）：" + result.rows.length + "条", leaguer.info , keyArr);
+		leaguer.displayDataToTable("#leaguer_info" ,"<strong>会员信息（info_leaguer）：" + result.rows.length + "条</strong>", leaguer.info , keyArr);
 		// 只处理查询到一个会员时，多个结果，处理无意义
 		if(result.rows.length == 1){
 			// 查询绑定车牌信息
 			helper.sql.select("select * from info_leaguer_plate t where t.leaguer_id = '" + result.rows[0].leaguer_id + "' order by t.insert_time", function(result) {
 				var keyArr   = ["plate_no","plate_type","bind_state","insert_time","update_time"];
-				leaguer.displayDataToTable("#leaguer_plate" ,"会员车牌（info_leaguer_bindingplate）：" + result.rows.length + "条", result.rows, keyArr);
+				leaguer.displayDataToTable("#leaguer_plate" ,"<strong>会员车牌（info_leaguer_bindingplate）：" + result.rows.length + "条</strong>", result.rows, keyArr);
 			});
 			// 查询停车卡信息
 			helper.sql.select("select * from info_park_card c where c.leaguer_id = '" + result.rows[0].leaguer_id + "' order by c.bind_time", function(result) {
 				var keyArr   = ["nid","remain_money","begin_time","end_time","bind_time","amount","valid_scope","third_valid_scope"];
-				leaguer.displayDataToTable("#leaguer_card" ,"会员停车卡（info_leaguer_bindingplate）：" + result.rows.length + "条", result.rows, keyArr);
+				leaguer.displayDataToTable("#leaguer_card" ,"<strong>会员停车卡（info_leaguer_bindingplate）：" + result.rows.length + "条</strong>", result.rows, keyArr);
 			});
 		}
 	};
