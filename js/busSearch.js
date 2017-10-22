@@ -125,7 +125,7 @@ $(function() {
 		// 只处理查询到一个会员时，多个结果，处理无意义
 		if(result.rows.length == 1){
 			// 查询绑定车牌信息
-			helper.sql.select("select * from info_leaguer_plate t where t.leaguer_id = '" + result.rows[0].leaguer_id + "' order by t.insert_time", function(result) {
+			helper.sql.select("select * from info_leaguer_plate t where t.bind_state = '2901' and t.leaguer_id = '" + result.rows[0].leaguer_id + "' order by t.insert_time", function(result) {
 				var keyArr   = ["plate_no","plate_type","bind_state","insert_time","update_time"];
 				leaguer.displayDataToTable("#leaguer_plate" ,"<strong>会员车牌（info_leaguer_bindingplate）：" + result.rows.length + "条</strong>", result.rows, keyArr);
 			});
